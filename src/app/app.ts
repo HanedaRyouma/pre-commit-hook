@@ -5,8 +5,14 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
+
   styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('pre-commit-hook');
+  protected readonly message = signal('');
+
+  protected showHelloWorld(): void {
+    this.message.set('HelloWorld');
+  }
 }
