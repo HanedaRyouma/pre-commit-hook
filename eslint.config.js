@@ -39,6 +39,6 @@ module.exports = defineConfig([
   {
     files: ['**/*.html'],
     extends: [angular.configs.templateRecommended, angular.configs.templateAccessibility],
-    rules: { 'no-multiple-empty-lines': ['error', { max: 0, maxBOF: 0, maxEOF: 0 }] },
+    rules: { 'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }] },
   },
 ]);
