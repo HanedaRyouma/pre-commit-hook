@@ -31,11 +31,14 @@ module.exports = defineConfig([
           style: 'kebab-case',
         },
       ],
+      'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
+      'no-trailing-spaces': 'error',
+      'eol-last': ['error', 'always'],
     },
   },
   {
     files: ['**/*.html'],
     extends: [angular.configs.templateRecommended, angular.configs.templateAccessibility],
-    rules: {},
+    rules: { 'no-multiple-empty-lines': ['error', { max: 0, maxBOF: 0, maxEOF: 0 }] },
   },
 ]);
